@@ -1,5 +1,5 @@
 const Genero = require ('../models/genero')
-const {request, response} = required('express')
+const {request, response} = require('express')
 
 const consultarGenero = async (req = request, res = response) => {
     try {

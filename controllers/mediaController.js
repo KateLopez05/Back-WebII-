@@ -1,5 +1,5 @@
 const Medias = require('../models/media')
-const {request, response} = required('express')
+const {request, response} = require('express')
 
 const crearMedia= async (req = request, res = response) => {
     try {

@@ -1,5 +1,5 @@
 const Tipos = require('../models/tipo')
-const {request, response} = required('express')
+const {request, response} = require('express')
 
 const crearTipo= async (req = request, res = response) => {
     try {

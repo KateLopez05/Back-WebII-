@@ -7,7 +7,7 @@ const ProductoraSchema = Schema({
         minLenght: 1
     },
     estado:{
-        type: boolean,
+        type: Boolean,
         default: true,
         required: true
     }, 

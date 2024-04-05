@@ -1,5 +1,5 @@
 const Directores = require('../models/director')
-const {request, response} = required('express')
+const {request, response} = require('express')
 
 const crearDirector= async (req = request, res = response) => {
     try {

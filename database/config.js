@@ -11,4 +11,4 @@ const ConectionMongo = async () => {
     }
 }
 
-module.exports = {ConectionMongo}
+module.exports = { ConectionMongo }

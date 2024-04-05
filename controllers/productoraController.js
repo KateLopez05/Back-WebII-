@@ -1,5 +1,5 @@
 const Productoras = require('../models/productora')
-const {request, response} = required('express')
+const {request, response} = require('express')
 
 const crearProductora= async (req = request, res = response) => {
     try {
