@@ -1,0 +1,22 @@
+{
+  "name": "ingwebii",
+  "version": "1.0.0",
+  "description": "API REST BackEnd peliculas IUD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "app",
+    "peliculas",
+    "IUD"
+  ],
+  "author": "Katerin Lopez",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.0"
+  }
+}
