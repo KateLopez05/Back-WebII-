@@ -6,13 +6,6 @@ const app = express()
 
 ConectionMongo()
 
-app.get("*", (req, res) => {
-    return res.status(404).json({
-        menssage: 'No encontrado',
-        status: 404
-    })
-})
-
 app.use(
     cors({
     origin: '*'})
@@ -32,5 +25,12 @@ app.use('/api/v1/directores', directores)
 app.use('/api/v1/productoras', productoras)
 app.use('/api/v1/tipos', tipos)
 app.use('/api/v1/medias', medias)
+
+app.get("*", (req, res) => {
+    return res.status(404).json({
+        menssage: 'No encontrado',
+        status: 404
+    })
+})
 
 module.exports = app
