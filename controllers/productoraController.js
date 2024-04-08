@@ -6,7 +6,7 @@ const crearProductora= async (req = request, res = response) => {
         const body = req.body
         const productoraPrincipal = new Productoras(body)
 
-        await Productoras.save()
+        await productoraPrincipal.save()
 
         return res.status(201).json(productoraPrincipal)
     } catch (error) {

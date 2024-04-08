@@ -16,7 +16,8 @@ const DirectorSchema = Schema({
         default: new Date()
     }, 
     fechaActualizacion: {
-        type: Date
+        type: Date, 
+        default: new Date()
     }
 })
 

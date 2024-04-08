@@ -6,7 +6,7 @@ const crearMedia= async (req = request, res = response) => {
         const body = req.body
         const agregado = new Medias(body)
 
-        await Medias.save()
+        await agregado.save()
 
         return res.status(201).json(agregado)
     } catch (error) {

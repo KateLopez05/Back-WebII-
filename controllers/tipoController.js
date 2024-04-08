@@ -6,7 +6,7 @@ const crearTipo= async (req = request, res = response) => {
         const body = req.body
         const tipoMultimedia = new Tipos(body)
 
-        await Tipos.save()
+        await tipoMultimedia.save()
 
         return res.status(201).json(tipoMultimedia)
     } catch (error) {
@@ -16,10 +16,10 @@ const crearTipo= async (req = request, res = response) => {
 
 const consultarTipo = async(req = request, res = response) => {
     try {
-        const { descripcion } = req.query
-        const descripcionProductora = await Tipos.find({descripcion})
+        const tipo = req.query.tipo
+        const tipos = await Tipos.find()
 
-        return res.json(descripcionProductora)
+        return res.json(tipos)
     } catch (error) {
         return res.status(500).json({mensaje: error})
     }

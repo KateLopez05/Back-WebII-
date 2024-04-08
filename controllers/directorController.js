@@ -4,11 +4,11 @@ const {request, response} = require('express')
 const crearDirector= async (req = request, res = response) => {
     try {
         const body = req.body
-        const directorPrincipal = new Director(body)
+        const directorPrincipal = new Directores(body)
 
         await directorPrincipal.save()
 
-        return res.status(201).json(Director)
+        return res.status(201).json(directorPrincipal)
     } catch (error) {
         return res.status(500).json({ mensaje : error })
     }
@@ -43,7 +43,7 @@ const borrarDirector = async(req= request, res= response) => {
     try {
         const id= req.params.id
 
-        await Director.findByIdAndDelete(id)
+        await Directores.findByIdAndDelete(id)
         return res.status(204).json({ mensaje: "Director borrado" })
     } catch (error) {
         return res.status(500).json({ mensaje: error})

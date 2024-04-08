@@ -20,10 +20,12 @@ const MediaSchema = Schema({
         type: String
     },
     fechaCreacion: {
-        type: Date
+        type: Date,
+        default: new Date()
     }, 
     fechaActualizacion: {
-        type: Date
+        type: Date, 
+        default: new Date()
     },
     fechaEstreno: {
         type: Date
